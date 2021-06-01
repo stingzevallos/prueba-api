@@ -54,10 +54,10 @@ public class AlumnoController {
 		}
 	}
 	
-	@GetMapping("/dni/{id}")
+	@GetMapping("/porDni/{id}")
 	@ResponseBody
-	public ResponseEntity<List<Alumno>> listaPorDni(@PathVariable("dni") String dniAlumno){
-		return ResponseEntity.ok(service.listaPorDni(dniAlumno));
+	public ResponseEntity<List<Alumno>> listaPorDni(@PathVariable("dni") String dni){
+		return ResponseEntity.ok(service.listaPorDni(dni));
 	}
 	
 	@PostMapping
